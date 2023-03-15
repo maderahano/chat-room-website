@@ -6,4 +6,8 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
+  root controller: :rooms, action: :index
+
+  resources :room_messages
+  resources :rooms
 end
