@@ -23,6 +23,11 @@ class RoomsController < ApplicationController
         end
     end
 
+    def show
+        @room_message = RoomMessage.new room: @room
+        @room_messages = @room.room_messages.includes(:user)
+    end
+
     def edit
     end
 
